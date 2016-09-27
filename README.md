@@ -1,5 +1,7 @@
 # Basic TodoList with Angular 2
 
+![imagen](http://i64.tinypic.com/33n7o82.png)
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.14.
 
 ## Development server
