@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { routing } from './app.routing';
+
 import { AppComponent } from './app.component';
+import { TodoListModule } from './todo-list';
+import { DashboardModule } from './dashboard';
 
 @NgModule({
   declarations: [
@@ -11,8 +14,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    routing,
+    TodoListModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

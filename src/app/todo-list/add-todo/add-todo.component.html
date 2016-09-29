@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs">
+    <form class="form-inline" [formGroup]="todoForm">
+      <div [ngClass]="{'form-group': true, 'has-success': todoForm.valid, 'has-danger': !todoForm.controls.todo.valid && todoForm.controls.todo.dirty}">
+        <input type="text" [ngClass]="{'form-control': true, 'form-control-success': todoForm.valid, 'form-control-danger': !todoForm.controls.todo.valid && todoForm.controls.todo.dirty}" formControlName="todo" placeholder="Ingrese un texto" required>
+        <button class="btn btn-outline-primary" (click)="addTodo()" [disabled]="!todoForm.valid">Añadir</button>
+        <div class="form-control-feedback" *ngIf="formErrors.todo" [ngClass]="{ 'text-invalid': !todoForm.controls.todo.valid && todoForm.controls.todo.dirty }">
+          {{ formErrors.todo }}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

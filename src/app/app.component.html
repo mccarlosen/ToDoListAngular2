@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-primary bg-faded">
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">TodoList App <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/todoapp" routerLinkActive="active">TodoList</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<section class="container">
+  <router-outlet></router-outlet>
+</section>
+

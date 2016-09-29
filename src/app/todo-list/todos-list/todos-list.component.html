@@ -1,0 +1,6 @@
+<div [ngClass]="{'form-check': true, 'has-success': todo.status}" *ngFor="let todo of todos">
+  <label class="form-check-label">
+    <input type="checkbox" class="form-check-input" [checked]="todo.status" (click)="onSelect(todo)">
+    {{ todo.title }}
+  </label>
+</div>
