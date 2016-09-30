@@ -11,6 +11,14 @@
         <a class="nav-link" routerLink="/todoapp" routerLinkActive="active">TodoList</a>
       </li>
     </ul>
+    <ul class="nav navbar-nav pull-xs-right">
+        <li class="nav-item" *ngIf="!auth.isLoggedIn">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">Iniciar sesión</a>
+        </li>
+        <li class="nav-item" *ngIf="auth.isLoggedIn">
+            <a class="nav-link" (click)="auth.logout()">Cerrar sesión</a>
+        </li>
+    </ul>
   </nav>
 </header>
 <section class="container">

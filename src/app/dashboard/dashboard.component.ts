@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
-  title: string = "Bienvenidos";
+  title: string = "Welcome to dashboard";
   subtitle: string = "Simple ToDoList with Angular 2";
 }

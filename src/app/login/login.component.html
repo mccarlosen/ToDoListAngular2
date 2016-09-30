@@ -1,0 +1,26 @@
+<div class="row flex-items-xs-center flex-items-xs-middle">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-5">
+        <div class="card card-block">
+            <h2 class="card-title">Iniciar sesión</h2>
+            <form [formGroup]="loginForm" autocomplete="off" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label>Usuario</label>
+                <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Ingrese su email" required>
+                <small id="emailHelp" class="form-text text-muted">El correo es: testing.cero@gmail.com</small>
+                <div class="form-control-feedback" *ngIf="formErrors.email" [ngClass]="{ 'text-invalid': !loginForm.controls.email.valid && loginForm.controls.email.dirty }">
+                  {{ formErrors.email }}
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" class="form-control" formControlName="password" aria-describedby="passwordHelp" placeholder="Ingrese su contraseña" required>
+                <small id="emailHelp" class="form-text text-muted">La contraseña es: 123456</small>
+                <div class="form-control-feedback" *ngIf="formErrors.password" [ngClass]="{ 'text-invalid': !loginForm.controls.password.valid && loginForm.controls.password.dirty }">
+                  {{ formErrors.password }}
+                </div>
+              </div>
+              <button type="submit" class="btn btn-outline-primary" [disabled]="!loginForm.valid">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>
